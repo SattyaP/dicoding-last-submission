@@ -1,0 +1,3 @@
+(() => {
+    const mainEvent = "CHANGE DATA";
+})()

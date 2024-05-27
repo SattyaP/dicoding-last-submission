@@ -1,19 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="this site content about books management">
     <meta name="author" content="Satya Garda Prasetyo">
     <meta name="keywords" content="books, management, library">
-    
-    <title>Document</title>
+
+    <title>Bookshelf Apps</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- TODO CREATE UI SIMPLE -->
-    
+    <header>
+        <h2>Bookshelf Apps</h2>
+    </header>
+
+    <div class="main-col">
+        <main>
+            <div class="search-form">
+                <input id="search" placeholder="Cari buku..." type="search">
+                <button type="button" id="searchBtn">Search</button>
+            </div>
+
+            <div class="book-list">
+                <h3>Daftar buku sudah</h3>
+                <div class="book-list-complete">
+                    <div class="card-book">
+                        <div class="card-body">
+                            <h4>Title</h4>
+                            <p>Penulis</p>
+                            <p>123</p>
+                        </div>
+                        <div class="action">
+                            <button type="button">Mark Complete</button>
+                            <button type="button">Delete Book</button>
+                            <button type="button">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-list">
+                <h3>Daftar buku belum</h3>
+                <div class="book-list-inComplete">
+                    <div class="card-book">
+                        <div class="card-body">
+                            <h4>Title</h4>
+                            <p>Penulis</p>
+                            <p>123</p>
+                        </div>
+                        <div class="action">
+                            <button type="button">Mark UnComplete</button>
+                            <button type="button">Delete Book</button>
+                            <button type="button">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="container">
+            <h3>Add Book</h3>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Book title">
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="Book author">
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="number" id="year" placeholder="Release year">
+            </div>
+
+            <div class="checkbox-wrapper-14">
+                <input id="isComplete" type="checkbox" class="switch">
+                <label for="isComplete">Telah Dibaca</label>
+            </div>
+
+            <button class="addBtn type=" button" id="addBtn">Add</button>
+        </div>
+    </div>
+
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
