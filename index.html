@@ -20,50 +20,28 @@
         <h2>Bookshelf Apps</h2>
     </header>
 
-    <div class="main-col">
-        <main>
-            <div class="search-form">
+    
+
+    <main class="main-col">
+        <section>
+            <form class="search-form">
                 <input id="search" placeholder="Cari buku..." type="search">
-                <button type="button" id="searchBtn">Search</button>
-            </div>
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
 
             <div class="book-list">
-                <h3>Daftar buku sudah</h3>
+                <h3>Belum Selesai Dibaca</h3>
                 <div class="book-list-complete">
-                    <div class="card-book">
-                        <div class="card-body">
-                            <h4>Title</h4>
-                            <p>Penulis</p>
-                            <p>123</p>
-                        </div>
-                        <div class="action">
-                            <button type="button">Mark Complete</button>
-                            <button type="button">Delete Book</button>
-                            <button type="button">Edit</button>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="book-list">
-                <h3>Daftar buku belum</h3>
+                <h3>Selesai Dibaca</h3>
                 <div class="book-list-inComplete">
-                    <div class="card-book">
-                        <div class="card-body">
-                            <h4>Title</h4>
-                            <p>Penulis</p>
-                            <p>123</p>
-                        </div>
-                        <div class="action">
-                            <button type="button">Mark UnComplete</button>
-                            <button type="button">Delete Book</button>
-                            <button type="button">Edit</button>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </main>
+        </section>
 
-        <div class="container">
+        <form id="form-store" class="container">
             <h3>Add Book</h3>
 
             <div class="form-group">
@@ -86,9 +64,9 @@
                 <label for="isComplete">Telah Dibaca</label>
             </div>
 
-            <button class="addBtn type=" button" id="addBtn">Add</button>
-        </div>
-    </div>
+            <button class="addBtn" type="submit" id="addBtn">Add</button>
+        </form>
+    </main>
 
     <script type="text/javascript" src="main.js"></script>
 </body>
