@@ -5,10 +5,10 @@
     function tambahBuku(e) {
         e.preventDefault();
 
-        const title = document.querySelector('#title').value;
-        const author = document.querySelector('#author').value;
-        const year = document.querySelector('#year').value;
-        const isComplete = document.querySelector('#isComplete').checked;
+        const title = document.querySelector('#title');
+        const author = document.querySelector('#author');
+        const year = document.querySelector('#year');
+        const isComplete = document.querySelector('#isComplete');
 
         let isExist = true;
 
@@ -19,14 +19,17 @@
             }
         })
 
+
         if (isExist) {
+            const generateId = +new Date();
+
             const book = {
-                id: +new Date(),
-                title: title,
-                author: author,
-                year: year,
-                isComplete: isComplete
-            }
+                id: generateId,
+                title: String(title.value),
+                author: String(author.value),
+                year: parseInt(year.value),
+                isComplete: Boolean(isComplete.checked) 
+            };
 
             temp.push(book);
             e.target.reset()
@@ -43,7 +46,7 @@
     }
 
     function deleteBook(e) {
-        const dialog = createDialog()
+        const dialog = createDialog();
 
         document.querySelector('main').appendChild(dialog);
         const id = e.target.parentElement.parentElement.getAttribute('data-id');
@@ -210,9 +213,10 @@
 
     window.addEventListener('load', () => {
         temp = JSON.parse(localStorage.getItem('data')) || [];
-        
-
         renderBook(temp);
+
+        console.log(JSON.stringify(temp, null, 2));
+
         const form = document.getElementById('form-store'),
             searchForm = document.querySelector('.search-form');
 
